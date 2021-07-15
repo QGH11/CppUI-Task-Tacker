@@ -11,13 +11,16 @@ using namespace std;
 class DaySchedule {
 	public:
 		DaySchedule(string name);
-		~DaySchedule();
 		void addTask();
+		void deleteTask();
 		void printSchedule();
+		string getName();
+
 
 	private:
 		vector<Task> day;
 		string scheduleName;
+		int getScheduleListIndex(string target);
 
 };
 

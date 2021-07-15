@@ -1,14 +1,17 @@
 #ifndef TASK_H
 #define TASK_H
 
+#include <iostream>
 #include <string>
+
 
 using namespace std;
 
 class Task {
 	public: 
-		Task(string taskName, string taskStartTime, string taskEndTime);
+		Task(string name, string startTime, string endTime);
 		void printTask();
+		string getName();
 
 	private: 
 		string taskName;

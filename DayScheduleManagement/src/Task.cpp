@@ -11,7 +11,14 @@ Task::Task(string name, string startTime, string endTime) {
 	taskEndTime = endTime;
 }
 
+
+string Task::getName() {
+	return taskName;
+}
+
 // print the task
 void Task::printTask() {
-	cout << taskName << " " << taskStartTime << " " << taskEndTime;
+	cout << "\tTask Name: " + taskName << " \n";
+	cout << "\tTask StartTime: " + taskStartTime << " \n";
+	cout << "\tTask EndTime: " + taskEndTime << "\n";
 }
