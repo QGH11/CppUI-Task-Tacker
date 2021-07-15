@@ -15,48 +15,12 @@ using namespace std;
 // global schedule vector
 vector<DaySchedule> scheduleList;
 
-bool ifContinue();
 int mainMenu();
 void createDay();
 void deleteDay();
 int getScheduleListIndex(string target);
 void modifyDay();
 void printScheduleList();
-
-bool ifContinue() {
-	string decision;
-
-	cout << "\nTo continue type \"yes\".\nTo stop type \"no\"\n";
-	cin >> decision;
-	cout << "\n";
-
-	// convert string into uppercase
-	for (int i = 0; i < decision.length(); i++) {
-		decision[i] = toupper(decision[i]);
-	}
-
-	// check for valid input
-	while (!(decision.compare("YES") == 0 || decision.compare("NO") == 0)) {
-		cout << "Invalid input!\n";
-
-		cout << "\nTo continue type \"yes\".\nTo stop type \"no\"\n";
-		cin >> decision;
-		cout << "\n";
-
-		// convert string into uppercase
-		for (int i = 0; i < decision.length(); i++) {
-			decision[i] = toupper(decision[i]);
-		}
-	}
-
-	if (decision.compare("YES")) {
-		return true;
-	}
-	else if (decision.compare("NO")) {
-		return false;
-	}
-
-}
 
 // ask user to choose an option
 int mainMenu() {
